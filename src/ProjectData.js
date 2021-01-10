@@ -1,16 +1,43 @@
 const projects = [
   {
-    name: "Sets",
-    description: "A React version of the popular logic game",
-  },
-  {
-    name: "Chore Tracker",
-    description: "A full stack app to track chores completed and money earned",
-  },
-  {
-    name: "Fotozu",
+    name: "MERN App",
     description:
-      "A full stack app using AWS lambda for serverless backend that showcases the photography of a client",
+      "Application to learn MERN stack, specifically integrating Express and MongoDB",
+    planned: false,
+    completed: false,
+    deployed: false,
+  },
+  {
+    name: "Portfolio",
+    description:
+      "My Portfolio built in React designed to showcase my progress as a developer and connect with the dev community",
+    planned: true,
+    completed: true,
+    deployed: true,
+  },
+  {
+    name: "50 Project 50 Days",
+    description:
+      "50x small CSS and JavaScript project to practise specific skills",
+    planned: true,
+    completed: false,
+    deployed: false,
+  },
+  {
+    name: "React Movie search",
+    description:
+      "A React application that lists movies along with a picture, description and rating. Developed to practise React and making fetch requests.",
+    planned: true,
+    completed: true,
+    deployed: true,
+  },
+  {
+    name: "React Tic Tac Toe",
+    description:
+      "Simple take on the classic game designed to to practise React fundamentals and state.",
+    planned: true,
+    completed: true,
+    deployed: true,
   },
 ];
 
