@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button, Row, RightRow, CheckBox } from "./Styled";
+import { input, Button, Row, RightRow } from "./Styled";
 
 export default function NewProjectForm({ handleSubmit }) {
   const formInput = {
@@ -22,7 +22,7 @@ export default function NewProjectForm({ handleSubmit }) {
   const handleCheck = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.checked,
+      status: e.target.value,
     });
   };
 
@@ -30,42 +30,52 @@ export default function NewProjectForm({ handleSubmit }) {
     <form onSubmit={(e) => handleSubmit(e, formData)}>
       <Row>
         <label>Name:</label>
-        <TextField
+        <input
           name="name"
           value={formData.name}
           onChange={handleChange}
-        ></TextField>
+        ></input>
       </Row>
       <Row>
-        <label>Description:</label>
-        <TextField
+        <label>Description</label>
+        <input
           name="description"
           value={formData.description}
           onChange={handleChange}
-        ></TextField>
+          ></input>
       </Row>
       <Row>
-        <label>Planned</label>
-        <CheckBox
-          name="planned"
-          type="checkbox"
-          checked={formData.planned}
+          <label>Progress thus far:</label>
+          </Row>
+      <Row>
+        <label>None Yet</label>
+        <input
+          name="status"
+          type="radio"
+          value="none"
           onChange={handleCheck}
-        ></CheckBox>
-				<label>Completed</label>
-        <CheckBox
-          name="completed"
-          type="checkbox"
-          checked={formData.completed}
+        ></input>
+        <label>Designed</label>
+        <input
+          name="status"
+          type="radio"
+          value="design"
           onChange={handleCheck}
-        ></CheckBox>
+        ></input>
+				<label>Built</label>
+        <input
+          name="status"
+          type="radio"
+          value="build"
+          onChange={handleCheck}
+        ></input>
 				<label>Deployed</label>
-        <CheckBox
-          name="deployed"
-          type="checkbox"
-          checked={formData.deployed}
+        <input
+          name="status"
+          type="radio"
+          value="deploy"
           onChange={handleCheck}
-        ></CheckBox>
+        ></input>
       </Row>
       <RightRow>
         <Button type="submit" value="submit">
